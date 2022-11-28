@@ -5,10 +5,20 @@ services:
     image: node-js:base
     container_name: webgl-tutorial
     volumes: 
-     - "../Demo/:/root/webgl-tutorial/src"
+     - "../src/:/root/webgl-tutorial/src"
     working_dir: "/root/webgl-tutorial"
     ports:
      - "3000:3030"
+    tty: true
+    restart: always
+  webgl-dev:
+    image: node-js:base
+    container_name: webgl-dev
+    volumes: 
+     - "../src/project:/root/webgl-tutorial/src"
+    working_dir: "/root/webgl-tutorial"
+    ports:
+     - "3030:3030"
     tty: true
     restart: always
   # ros-master:

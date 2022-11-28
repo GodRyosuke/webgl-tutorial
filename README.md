@@ -9,7 +9,7 @@ Docker
 
 ## build
 ```bash
-git clone 
+git clone https://github.com/GodRyosuke/webgl-tutorial.git
 cd .docker
 docker build -t node-js:base .
 ```
